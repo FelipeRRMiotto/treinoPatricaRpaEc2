@@ -20,6 +20,8 @@ elif int(hora_cotacao_temp) < 3:
 else:
     hora_cotacao_temp = str(int(hora_cotacao_temp)-3)
 hora_cotacao = hora_cotacao_temp+":"+(hora_cotacao.split(":"))[1]+":"+(((hora_cotacao.split(":"))[2]).split(" "))[0]
+hora_cotacao = hora_cotacao.replace(' PM','')
+hora_cotacao = hora_cotacao.replace(' AM','')
 
 print(valor_dolar," | ",data_cotacao," | ",hora_cotacao)
 
